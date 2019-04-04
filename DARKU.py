@@ -11,13 +11,15 @@
 
 #Import
 import time
+from tkinter import *
+import tkinter.messagebox
 import os
 from tcpgecko import *
 import sys
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-versions = " 1.0"
+versions = " 1.2"
 
 class bcolors:
     HEADER = '\033[95m'
@@ -29,62 +31,70 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print(bcolors.BOLD +bcolors.OKBLUE +"     _____             _    _    _ " + bcolors.ENDC)
-print(bcolors.BOLD +bcolors.OKBLUE +"    |  __ \           | |  | |  | |" + bcolors.ENDC)
-print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | | __ _ _ __| | _| |  | |" + bcolors.ENDC)
-print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | |/ _` | '__| |/ / |  | |" + bcolors.ENDC)
-print(bcolors.BOLD +bcolors.OKBLUE +"    | |__| | (_| | |  |   <| |__| |" + bcolors.ENDC)
-print(bcolors.BOLD +bcolors.OKBLUE +"    |_____/ \__,_|_|  |_|\_\\_____/"+ versions + bcolors.ENDC)
-print(bcolors.BOLD +bcolors.OKBLUE +"                                    Created by vincent-coding" + bcolors.ENDC)
-time.sleep(1)
+def checkinject():
+    ip = wiiuip.get()
+    colors = listecouleur.get()
+    if ip != "":
+        if colors=="White":
+            wtcp = TCPGecko(ip)
+            wtcp.pokemem(0x105DD0A8, 0x3F800000)
+            wtcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")           
+        elif colors=="Black":
+            btcp = TCPGecko(ip)
+            btcp.pokemem(0x105DD0A8, 0x00000000)
+            btcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")
+        elif colors=="Light grey":
+            lgtcp = TCPGecko(ip)
+            lgtcp.pokemem(0x105DD0A8, 0x3E800000)
+            lgtcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")  
+        elif colors=="Grey":
+            gtcp = TCPGecko(ip)
+            gtcp.pokemem(0x105DD0A8, 0x3D800000)
+            gtcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")
+        elif colors=="Dark grey":
+            dgtcp = TCPGecko(ip)
+            dgtcp.pokemem(0x105DD0A8, 0x3C800000)
+            dgtcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")   
+        elif colors=="Very dark grey":
+            vdgtcp = TCPGecko(ip)
+            vdgtcp.pokemem(0x105DD0A8, 0x3B800000)
+            vdgtcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")
+    else:
+        tkinter.messagebox.showerror("DarkU - "+versions, "Please fill in the \"wiiu ip\" field")
 
-theme=input("\n\nWhat theme do you want?\nEnter \"white\" or \"black\".\n")
-if theme.lower()=="white":
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(bcolors.BOLD +bcolors.OKBLUE +"     _____             _    _    _ " + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    |  __ \           | |  | |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | | __ _ _ __| | _| |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | |/ _` | '__| |/ / |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |__| | (_| | |  |   <| |__| |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    |_____/ \__,_|_|  |_|\_\\_____/"+ versions + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"                                    Created by vincent-coding" + bcolors.ENDC)  
-    time.sleep(1)
-    whiteip=input("\n\nWhat is the ip of the WiiU?\n")
-    whitetcp = TCPGecko(whiteip)
-    time.sleep(1)
-    print('Modification in progress')
-    time.sleep(1)    
-    whitetcp.pokemem(0x105DD0A8, 0x3F800000)
-    whitetcp.s.close()
-    print(bcolors.OKGREEN + "Successful modification." + bcolors.ENDC)
-elif theme.lower()=="black":
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(bcolors.BOLD +bcolors.OKBLUE +"     _____             _    _    _ " + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    |  __ \           | |  | |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | | __ _ _ __| | _| |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | |/ _` | '__| |/ / |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |__| | (_| | |  |   <| |__| |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    |_____/ \__,_|_|  |_|\_\\_____/"+ versions + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"                                    Created by vincent-coding" + bcolors.ENDC)  
-    time.sleep(1)    
-    blackip=input("\n\nWhat is the ip of the WiiU?\n")
-    blacktcp = TCPGecko(blackip)
-    time.sleep(1)
-    print('Modification in progress')
-    time.sleep(1)
-    blacktcp.pokemem(0x105DD0A8, 0x00000000)
-    blacktcp.s.close()
-    print(bcolors.OKGREEN + "Successful modification." + bcolors.ENDC)
-else:
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(bcolors.BOLD +bcolors.OKBLUE +"     _____             _    _    _ " + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    |  __ \           | |  | |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | | __ _ _ __| | _| |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |  | |/ _` | '__| |/ / |  | |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    | |__| | (_| | |  |   <| |__| |" + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"    |_____/ \__,_|_|  |_|\_\\_____/"+ versions + bcolors.ENDC)
-    print(bcolors.BOLD +bcolors.OKBLUE +"                                    Created by vincent-coding" + bcolors.ENDC)   
-    time.sleep(1)    
-    print(bcolors.FAIL + bcolors.BOLD + "\n\nError, to be able to change the background color of your WiiU menu, you must select a color!" + bcolors.ENDC)
+# Interface
+main = Tk()
+ 
+wiiuip = StringVar()
+listecouleur = StringVar()
+listecouleur.set("White")
 
+#Info de la fenetre
+largeur      = 300
+hauteur      = 175
+largeurEcran = main.winfo_screenwidth()
+hauteurEcran = main.winfo_screenheight()
+x            = (largeurEcran / 2) - (largeur / 2)
+y            = (hauteurEcran / 2) - (hauteur /2)
+main.geometry('%dx%d+%d+%d' % (largeur, hauteur, x, y))
+main.resizable(width = False, height = False)
+main.title("DarkU - "+versions)
+
+#Component
+content = Frame(width=250, height=15).pack()
+iplabel = Label(content, text="WiiU ip").pack()
+ipentry = Entry(content, textvariable=wiiuip).pack()
+listecolorsmenu = OptionMenu(content, listecouleur, "White", "Light grey", "Grey", "Dark grey", "Very dark grey", "Black").pack(pady=5)
+inject = Button(content, text="Inject", command=checkinject).pack(pady=5)
+
+info = Label(main, text="Created by vincent-coding").pack(side=BOTTOM)
+
+# END
+main.mainloop()
 #Created by vincent-coding
