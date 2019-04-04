@@ -33,7 +33,7 @@ All that's left is to enter the ip of your wii u, and choose the color and click
 WiiU: 5.5.3 E**
 ###### Images
 **Normal colors**<br />
-<img src="http://image.noelshack.com/fichiers/2019/14/4/1554394412-20190404-175629.jpg"><br />
+<img src="http://image.noelshack.com/fichiers/2019/14/4/1554395110-20190404-175629.jpg"><br />
 <br />
 **Light grey**<br />
 <img src="http://image.noelshack.com/fichiers/2019/14/4/1554394446-20190404-175657.jpg"><br />
