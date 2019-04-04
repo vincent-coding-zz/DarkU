@@ -19,7 +19,7 @@ import sys
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-versions = " 1.2"
+versions = " 1.3"
 
 class bcolors:
     HEADER = '\033[95m'
@@ -35,11 +35,16 @@ def checkinject():
     ip = wiiuip.get()
     colors = listecouleur.get()
     if ip != "":
-        if colors=="White":
+        if colors=="Reset":
             wtcp = TCPGecko(ip)
             wtcp.pokemem(0x105DD0A8, 0x3F800000)
             wtcp.s.close()
-            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")           
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")
+        elif colors=="White":
+            wtcp = TCPGecko(ip)
+            wtcp.pokemem(0x105DD0A8, 0x40000000)
+            wtcp.s.close()
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")            
         elif colors=="Black":
             btcp = TCPGecko(ip)
             btcp.pokemem(0x105DD0A8, 0x00000000)
@@ -73,7 +78,7 @@ main = Tk()
  
 wiiuip = StringVar()
 listecouleur = StringVar()
-listecouleur.set("White")
+listecouleur.set("Reset")
 
 #Info de la fenetre
 largeur      = 300
@@ -90,11 +95,12 @@ main.title("DarkU - "+versions)
 content = Frame(width=250, height=15).pack()
 iplabel = Label(content, text="WiiU ip").pack()
 ipentry = Entry(content, textvariable=wiiuip).pack()
-listecolorsmenu = OptionMenu(content, listecouleur, "White", "Light grey", "Grey", "Dark grey", "Very dark grey", "Black").pack(pady=5)
+listecolorsmenu = OptionMenu(content, listecouleur, "Reset","White", "Light grey", "Grey", "Dark grey", "Very dark grey", "Black").pack(pady=5)
 inject = Button(content, text="Inject", command=checkinject).pack(pady=5)
 
 info = Label(main, text="Created by vincent-coding").pack(side=BOTTOM)
 
-# END
+
+
 main.mainloop()
 #Created by vincent-coding
