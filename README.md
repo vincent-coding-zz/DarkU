@@ -16,7 +16,7 @@ On your sd card, you will need:<br />
 #### Colors available
 White<br />
 Light grey<br />
-Medium grey<br />
+Grey<br />
 Dark grey<br />
 Very dark grey<br />
 Black<br />
