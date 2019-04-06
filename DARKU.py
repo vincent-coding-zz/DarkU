@@ -17,19 +17,7 @@ import os
 from tcpgecko import *
 import sys
 
-os.system('cls' if os.name == 'nt' else 'clear')
-
-versions = " 1.3"
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+versions = " 1.4"
 
 def checkinject():
     ip = wiiuip.get()
@@ -69,10 +57,16 @@ def checkinject():
             vdgtcp = TCPGecko(ip)
             vdgtcp.pokemem(0x105DD0A8, 0x3B800000)
             vdgtcp.s.close()
-            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")
+            tkinter.messagebox.showinfo("DarkU - "+versions, "Injection successful!")            
     else:
         tkinter.messagebox.showerror("DarkU - "+versions, "Please fill in the \"wiiu ip\" field")
+def saveip():
+    saveipvalue = wiiuip.get()
+    with open("ip.darku", "w") as ipconfig:
+        ipconfig.write("ip:"+saveipvalue)
+        tkinter.messagebox.showinfo("DarkU - "+versions, "The ip has been saved!")
 
+    
 # Interface
 main = Tk()
  
@@ -82,7 +76,7 @@ listecouleur.set("Reset")
 
 #Info de la fenetre
 largeur      = 300
-hauteur      = 175
+hauteur      = 200
 largeurEcran = main.winfo_screenwidth()
 hauteurEcran = main.winfo_screenheight()
 x            = (largeurEcran / 2) - (largeur / 2)
@@ -95,12 +89,19 @@ main.title("DarkU - "+versions)
 content = Frame(width=250, height=15).pack()
 iplabel = Label(content, text="WiiU ip").pack()
 ipentry = Entry(content, textvariable=wiiuip).pack()
-listecolorsmenu = OptionMenu(content, listecouleur, "Reset","White", "Light grey", "Grey", "Dark grey", "Very dark grey", "Black").pack(pady=5)
+ipsave = Button(content, text="Save ip",command=saveip).pack(pady=5)
+listecolorsmenu = OptionMenu(content, listecouleur, "Reset","White","Light grey", "Grey", "Dark grey", "Very dark grey", "Black").pack(pady=5)
 inject = Button(content, text="Inject", command=checkinject).pack(pady=5)
 
 info = Label(main, text="Created by vincent-coding").pack(side=BOTTOM)
 
-
+try:
+    with open('ip.darku'):
+        with open('ip.darku') as ipconfig:
+            ipconf = ipconfig.readline()
+            wiiuip.set(ipconf.replace("ip:",""))
+except IOError:
+    print("")
 
 main.mainloop()
 #Created by vincent-coding
