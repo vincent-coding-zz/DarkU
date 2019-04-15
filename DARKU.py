@@ -1,10 +1,6 @@
 # DarkU
 # Created by vincent-coding
-# Licences : MIT
-
-# Si vous décidez d'utiliser le code source, mentionnez-moi comme créateur de base !
-# If you decide to use the source code, please mention me as the basic creator!
-
+# Licences : Apache License 2.0
 # START
 # !usr/bin/env python
 # -*- coding: utf-8 -*-
