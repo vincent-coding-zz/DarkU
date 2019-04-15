@@ -1,6 +1,6 @@
 # DarkU
 DarkU is a software created by vincent-coding.<br />
-It is under MIT license.<br />
+The software is under Apache License 2.0.<br />
 <br />
 ## Require
 To use DarkU you will need <a href="https://www.python.org/">`python.`</a><br />
