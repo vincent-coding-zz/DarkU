@@ -16,8 +16,8 @@ Windows : `pip install pypresence`<br />
 Its three files are necessary to change the background color of the WiiU.<br />
 <br />
 On your sd card, you will need:<br />
-[Homebrew Launcher]: https://www.wiiubru.com/appstore/#/app/homebrew_launcher)<br />
-[TCP Gecko]: https://www.wiiubru.com/appstore/#/app/TCPgecko
+<a href="https://www.wiiubru.com/appstore/#/app/homebrew_launcher">Homebrew Launcher</a><br />
+<a href="https://www.wiiubru.com/appstore/#/app/TCPgecko">TCPGecko</a><br />
 <br />
 #### Colors available
 Default<br />
