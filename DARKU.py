@@ -12,8 +12,10 @@ import tkinter.messagebox
 import os
 from tcpgecko import *
 import sys
+from pypresence import Presence
+import
 
-versions = " 1.4"
+versions = "1.4.3"
 
 def checkinject():
     ip = wiiuip.get()
@@ -62,7 +64,12 @@ def saveip():
         ipconfig.write("ip:"+saveipvalue)
         tkinter.messagebox.showinfo("DarkU - "+versions, "The ip has been saved!")
 
-    
+   
+client_id = '581046907808382989'
+RPC = Presence(client_id)  # Initialize the Presence class
+RPC.connect()  # Start the handshake loop
+RPC.update(large_image="icons", large_text="DarkU", state="Injected")
+
 # Interface
 main = Tk()
  
