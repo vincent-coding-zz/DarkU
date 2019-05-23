@@ -13,7 +13,6 @@ import os
 from tcpgecko import *
 import sys
 from pypresence import Presence
-import
 
 versions = "1.4.3"
 
