@@ -36,5 +36,5 @@ If you are under linux, run the program from a terminal. Execute the command `py
 <img src="http://image.noelshack.com/fichiers/2019/14/4/1554392375-darku-00001.png"><br />
 All that's left is to enter the ip of your wii u, and choose the color and click on Inject!<br />
 <br />
-*PC: Linux Mint cinnamon 19.1<br />
-WiiU: 5.5.3 E*
+**PC: Linux Mint cinnamon 19.1<br />
+WiiU: 5.5.3 E**
