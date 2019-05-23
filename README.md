@@ -12,11 +12,11 @@ Please check that you have all three files: <br />
 Its three files are necessary to change the background color of the WiiU.<br />
 <br />
 On your sd card, you will need:<br />
-<a href="https://www.wiiubru.com/appstore/#/app/homebrew_launcher">`Homebrew launcher`</a><br />
-<a href="https://www.wiiubru.com/appstore/#/app/TCPgecko">`TCP Gecko`</a><br />
+[I'm an inline-style link](https://www.wiiubru.com/appstore/#/app/homebrew_launcher)<br />
+[I'm an inline-style link](https://www.wiiubru.com/appstore/#/app/TCPgecko)<br />
 <br />
 #### Colors available
-Normal<br />
+Default<br />
 White<br />
 Light grey<br />
 Grey<br />
