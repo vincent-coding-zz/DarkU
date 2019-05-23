@@ -25,7 +25,7 @@ You also need [python 3](https://www.python.org/).<br />
 On your computer, please check that you have these three files (from version 1.4 onwards this is no longer necessary unless you choose the source code version)<br />
 `DARKU.py` and `common.py` and `tcpgecko.py`<br />
 <br />
-If you have chosen version 1.4.3 or higher, please run this command in a terminal.<br />
+If you have chosen version 1.4.3 or higher, please run this command in a terminal.(only for the uncompiled version)<br />
 Windows : `pip install pypresence`<br />
 Linux        : `pip3 install pypresence`<br />
 
