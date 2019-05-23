@@ -14,7 +14,7 @@ from tcpgecko import *
 import sys
 from pypresence import Presence
 
-versions = "1.4.3"
+versions = " 1.4.3"
 
 def checkinject():
     ip = wiiuip.get()
@@ -63,28 +63,22 @@ def saveip():
         ipconfig.write("ip:"+saveipvalue)
         tkinter.messagebox.showinfo("DarkU - "+versions, "The ip has been saved!")
 
-   
+    
+    
 client_id = '581046907808382989'
-RPC = Presence(client_id)  # Initialize the Presence class
-RPC.connect()  # Start the handshake loop
-RPC.update(large_image="icons", large_text="DarkU", state="Injected")
-
+RPC = Presence(client_id)
+RPC.connect()
+RPC.update(large_image="icons", large_text="DarkU - "+versions, state="By vincent-coding", details="Choose a color")
+    
 # Interface
 main = Tk()
- 
+
 wiiuip = StringVar()
 listecouleur = StringVar()
 listecouleur.set("Reset")
 
 #Info de la fenetre
-largeur      = 300
-hauteur      = 200
-largeurEcran = main.winfo_screenwidth()
-hauteurEcran = main.winfo_screenheight()
-x            = (largeurEcran / 2) - (largeur / 2)
-y            = (hauteurEcran / 2) - (hauteur /2)
-main.geometry('%dx%d+%d+%d' % (largeur, hauteur, x, y))
-main.resizable(width = False, height = False)
+
 main.title("DarkU - "+versions)
 
 #Component
