@@ -10,9 +10,8 @@ Please check that you have all three files: <br />
 > From version 1.4 onwards, this is no longer necessary because the file is compiled (unless you choose the source code version)
 <br />
 <b>Before using the software, please execute this command in a terminal.</b><br />
-Linux   : `pip3 install pypresence`<br />
-Windows : `pip install pypresence`<br />
-`gg`
+Linux   : `pip3 install pypresence`.<br />
+Windows : `pip install pypresence`.<br />
 <br />
 Its three files are necessary to change the background color of the WiiU.<br />
 <br />
