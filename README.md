@@ -1,40 +1,58 @@
 # DarkU
-DarkU is a software created by vincent-coding.<br />
-The software is under Apache License 2.0.<br />
-<br />
-## Require
-To use DarkU you will need <a href="https://www.python.org/">`python.`</a><br />
-Other libraries such as <a href="https://github.com/wiiudev/pyGecko">`pyGecko`</a> are required, but included in the software source code.<br />
-Please check that you have all three files: <br />
-`DARKU.py`, `common.py` and `tcpgcecko.py`.<br />
-> From version 1.4 onwards, this is no longer necessary because the file is compiled (unless you choose the source code version)
-<br />
-<b>Before using the software, please execute this command in a terminal.</b><br />
-Linux   : <i>pip3 install pypresence</i><br />
-Windows : <i>pip install pypresence</i><br />
-<br />
-Its three files are necessary to change the background color of the WiiU.<br />
-<br />
-On your sd card, you will need:<br />
-<a href="https://www.wiiubru.com/appstore/#/app/homebrew_launcher">Homebrew Launcher</a><br />
-<a href="https://www.wiiubru.com/appstore/#/app/TCPgecko">TCPGecko</a><br />
-<br />
-#### Colors available
-Default<br />
-White<br />
-Light grey<br />
-Grey<br />
-Dark grey<br />
-Very dark grey<br />
-Black<br />
-<br />
-##### Tutoriel
-Here is the tutorial in pictures.<br />
-If you are under linux, run the program from a terminal. Execute the command `python3 DARKU.py`
-<img src="http://image.noelshack.com/fichiers/2019/14/4/1554392220-darku-00000.png"><br />
-<br />
-<img src="http://image.noelshack.com/fichiers/2019/14/4/1554392375-darku-00001.png"><br />
-All that's left is to enter the ip of your wii u, and choose the color and click on Inject!<br />
-<br />
-**PC: Linux Mint cinnamon 19.1<br />
-WiiU: 5.5.3 E**
+DarkU is a French software, developed in Python and translated into English.
+It is developed by vincent-coding.
+
+## What's DarkU?
+DarkU is a software that aims to temporarily change the background colors of the WiiU's screen. The software is currently in version 1.4.3.
+
+## What are the colors available in DarkU?
+For the moment it's just shades of grey, but its creator is looking to be able to put other colors.
+ - Default
+ - White
+ - Light grey
+ - Grey
+ - Dark grey
+ - Very dark grey
+ - Black
+
+## Is this really useful?
+This is mainly up to you, but it can be very useful.
+
+## Are there any requirements?
+Yes, you need a computer, a wiiu, an sd card that contains [tcpgecko](https://www.wiiubru.com/appstore/#/app/TCPgecko) and [homebrew launcher](https://www.wiiubru.com/appstore/#/app/homebrew_launcher).
+You also need [python 3](https://www.python.org/).
+
+On your computer, please check that you have these three files (from version 1.4 onwards this is no longer necessary unless you choose the source code version)
+`DARKU.py` and `common.py` and `tcpgecko.py`
+
+If you have chosen version 1.4.3 or higher, please run this command in a terminal.
+Windows : `pip install pypresence`
+Linux        : `pip3 install pypresence`
+
+## Installation
+
+From version 1.4 or higher, simply double-click on the file of your operating system.
+
+If you have taken a version lower than 1.4 (example versions 1.2) All you have to do in a terminal is to execute the following command.
+Windows : `python DARKU.py`
+Linux : `python3 DARKU.py`
+
+Linux example.
+![Linux example](https://camo.githubusercontent.com/855d6bf41e69d94c2ddef7f15ba911512cddf098/687474703a2f2f696d6167652e6e6f656c736861636b2e636f6d2f66696368696572732f323031392f31342f342f313535343339323232302d6461726b752d30303030302e706e67)
+
+Wait a second, the software should open.
+
+Then, enter the ip of your WiiU and choose the color and click on inject.
+
+![Graphical interface (version 1.2)](https://camo.githubusercontent.com/04629c975ba60badbe736da1292637164d150716/687474703a2f2f696d6167652e6e6f656c736861636b2e636f6d2f66696368696572732f323031392f31342f342f313535343339323337352d6461726b752d30303030312e706e67)
+
+### Library used
+The [PyGecko](https://github.com/wiiudev/pyGecko) library.
+The [PyPresence](https://pypi.org/project/pypresence/) library. (From 1.4.3)
+
+### Configuration
+A 32GB WiiU. In version 5.5.3E.
+A PC in dual boot: Ubuntu 16.04 and Windows 7.
+A PC in dual boot: Linux Mint cinnamon 19.1 and Windows 10.
+
+And more
