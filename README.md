@@ -8,7 +8,8 @@ Other libraries such as <a href="https://github.com/wiiudev/pyGecko">`pyGecko`</
 Please check that you have all three files: <br />
 `DARKU.py`, `common.py` and `tcpgcecko.py`.<br />
 > From version 1.4 onwards, this is no longer necessary because the file is compiled (unless you choose the source code version)
-<Its three files are necessary to change the background color of the WiiU.<br />
+<br />
+Its three files are necessary to change the background color of the WiiU.<br />
 <br />
 On your sd card, you will need:<br />
 <a href="https://www.wiiubru.com/appstore/#/app/homebrew_launcher">`Homebrew launcher`</a><br />
