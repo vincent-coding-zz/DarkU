@@ -14,6 +14,7 @@ Please check that you have all three files: <br />
 Linux   : pip3 install pypresence
 Windows : pip install pypresence
 ```
+<br />
 Its three files are necessary to change the background color of the WiiU.<br />
 <br />
 On your sd card, you will need:<br />
