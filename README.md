@@ -7,6 +7,7 @@ To use DarkU you will need <a href="https://www.python.org/">`python.`</a><br />
 Other libraries such as <a href="https://github.com/wiiudev/pyGecko">`pyGecko`</a> are required, but included in the software source code.<br />
 Please check that you have all three files: <br />
 `DARKU.py`, `common.py` and `tcpgcecko.py`.<br />
+> From version 1.4 onwards, this is no longer necessary because the file is compiled (unless you choose the source code version)
 Its three files are necessary to change the background color of the WiiU.<br />
 <br />
 On your sd card, you will need:<br />
@@ -14,6 +15,7 @@ On your sd card, you will need:<br />
 <a href="https://www.wiiubru.com/appstore/#/app/TCPgecko">`TCP Gecko`</a><br />
 <br />
 #### Colors available
+Normal<br />
 White<br />
 Light grey<br />
 Grey<br />
