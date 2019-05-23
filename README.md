@@ -12,7 +12,7 @@ Please check that you have all three files: <br />
 Its three files are necessary to change the background color of the WiiU.<br />
 <br />
 On your sd card, you will need:<br />
-[Homebrew Launcher](https://www.wiiubru.com/appstore/#/app/homebrew_launcher)<br />
+[Homebrew Launcher]: https://www.wiiubru.com/appstore/#/app/homebrew_launcher)<br />
 [TCP Gecko]: https://www.wiiubru.com/appstore/#/app/TCPgecko
 <br />
 #### Colors available
@@ -32,5 +32,5 @@ If you are under linux, run the program from a terminal. Execute the command `py
 <img src="http://image.noelshack.com/fichiers/2019/14/4/1554392375-darku-00001.png"><br />
 All that's left is to enter the ip of your wii u, and choose the color and click on Inject!<br />
 <br />
-**PC: Linux Mint cinnamon 19.1<br />
-WiiU: 5.5.3 E**
+**PC: Linux Mint cinnamon 19.1<br />**
+**WiiU: 5.5.3 E**
