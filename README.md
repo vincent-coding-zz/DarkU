@@ -47,7 +47,7 @@ Then, enter the ip of your WiiU and choose the color and click on inject.
 ![Graphical interface (version 1.2)](https://camo.githubusercontent.com/04629c975ba60badbe736da1292637164d150716/687474703a2f2f696d6167652e6e6f656c736861636b2e636f6d2f66696368696572732f323031392f31342f342f313535343339323337352d6461726b752d30303030312e706e67)
 
 ### Library used
-The [PyGecko](https://github.com/wiiudev/pyGecko) library.
+The [PyGecko](https://github.com/wiiudev/pyGecko) library.<br />
 The [PyPresence](https://pypi.org/project/pypresence/) library. (From 1.4.3)
 
 ### Configuration
